@@ -2,7 +2,7 @@ CleanEx: Excel Deconstruction & Construction
 
 1. Note on Files
 
-Keep all the files in this directory together. The only file users will interact with is the program executable "cleanex.exe" 
+Keep all the files in this directory together. The only file users will interact with is the program executable "CleanEx.exe" 
 All other files/subdirectories are dependencies for the executable program to work.
 
 
@@ -71,3 +71,8 @@ original .xls file.
 
 The JSON metadata file at the end of running construction contains any metadata found within the excel file at the time of deconstruction. Included with that are MD5 hashes for
 the original excel file and the newly constructed excel file.
+
+7. Excel Media
+
+Media inside excel files are not replaced into newly constructed files due to limitations of what can be found in the OpenXML architecture. Media, like images, are saved in a subdirectory
+named "media" (it will be empty if the file had none). Users can use the PDF for reference of where each media piece was in the original document.
